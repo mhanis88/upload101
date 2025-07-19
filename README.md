@@ -103,24 +103,9 @@ routes/
 storage/
 └── app/
     └── uploads/
-tests/
-├── Feature/
-│   └── FileUploadTest.php
-└── Unit/
-    └── FileUploadModelTest.php
 ```
 
 ## Configuration
-
-### File Upload Limits
-- Maximum file size: 10MB
-- Allowed file types: jpg, jpeg, png, gif, pdf, doc, docx, txt
-- Maximum files per upload: 10
-
-### Storage Configuration
-- Default disk: `local`
-- Upload path: `storage/app/uploads`
-- Public access: Via storage link
 
 ## API Endpoints
 
@@ -132,60 +117,3 @@ tests/
 | GET | `/uploads/{id}` | Show file details |
 | GET | `/uploads/{id}/download` | Download file |
 | DELETE | `/uploads/{id}` | Delete file |
-
-## Testing
-
-Run the test suite:
-```bash
-php artisan test
-```
-
-Run specific tests:
-```bash
-php artisan test --filter FileUploadTest
-```
-
-## Development Notes
-
-### Key Considerations
-1. **Security**: Validate file types and sanitize filenames
-2. **Performance**: Handle large file uploads efficiently
-3. **User Experience**: Provide clear feedback and progress indicators
-4. **Error Handling**: Graceful error messages and recovery
-5. **Scalability**: Design for potential cloud storage integration
-
-### Best Practices
-- Use Laravel's built-in validation
-- Implement proper error handling
-- Follow Laravel naming conventions
-- Write comprehensive tests
-- Document all public methods
-
-## Deployment
-
-### Production Checklist
-- [ ] Configure production database
-- [ ] Set up file storage (S3, etc.)
-- [ ] Configure environment variables
-- [ ] Set up SSL certificates
-- [ ] Configure web server
-- [ ] Set up monitoring and logging
-
-## Contributing
-
-1. Follow PSR-12 coding standards
-2. Write tests for new features
-3. Update documentation
-4. Use meaningful commit messages
-
-## License
-
-This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
----
-
-**Assignment Status**: 🚧 In Development
-
-**Last Updated**: $(date)
-
-**Developer**: [Your Name]
